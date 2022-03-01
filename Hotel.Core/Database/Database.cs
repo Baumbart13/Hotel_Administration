@@ -7,23 +7,16 @@ public abstract class Database
     protected static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
     protected DbConnection mConnection;
 
-    protected string mHostname = "",
-        mUsername = "",
-        mPassword = "",
-        mDatabaseName = "";
+    protected string mHostname = "";
+    protected string mUsername = "";
+    protected string mPassword = "";
+    protected string mDatabaseName = "";
     
-    public string Hostname
-    {
-        get { return this.mHostname; }
-    }
-    public string Username
-    {
-        get { return this.mUsername; }
-    }
-    public string DatabaseNameName
-    {
-        get { return mDatabaseName; }
-    }
+    public string Hostname => this.mHostname;
+
+    public string Username => this.mUsername;
+
+    public string DatabaseNameName => mDatabaseName;
 
     public Database(string hostname, string username, string password, string databaseName)
     {
